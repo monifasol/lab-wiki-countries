@@ -3,6 +3,8 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import CountriesList from "./components/CountriesList";
 import CountryDetails from "./components/CountryDetails";
+import ErrorPage from "./components/ErrorPage";
+import { Redirect } from "react-router";
 
 function App() {
 
@@ -16,8 +18,12 @@ function App() {
         <CountriesList />
 
         <Switch>
-          <Route path={`/country-details/:alpha3Code`} component={CountryDetails} />
+          <Route exact path={`/`} />    
+          <Route exact path={`/:id`} component={CountryDetails} />
+          <Route path='*' exact component={ErrorPage} />
+          <Redirect from='*' to='/not-found' />
         </Switch>
+
       </div>
 
   </div>

@@ -6,8 +6,7 @@ const NavBar = () => {
         <nav>
             <h2> LAB - WikiCountries </h2>
             <div className="nav-links">
-                <Link to="/">Home</Link>
-                <Link to="/countries-list">Countries List</Link>
+                <Link to="/">Countries List</Link>
             </div>
         </nav>
     )

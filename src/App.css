@@ -46,10 +46,13 @@ h2 {
 }
 .loading {
   font-weight: bold;
-  background-color: #eaeaea;
   padding: 20px;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .spinner {
   width: 80px;
@@ -78,6 +81,11 @@ h2 {
 }
 .country-details .flag-img {
   width: 100%;
+}
+.country-details .link a {
+  color: black;
+  display: block;
+  margin: 10px auto;
 }
 .country-details span {
   font-weight: bold;

@@ -40,7 +40,7 @@ const CountriesList = (props) => {
             { countries.map( (country) => {
                 
                 return (
-                    <Link to={`/country-details/${country.alpha3Code}`} key={country._id} >
+                    <Link to={`/${country.alpha3Code}`} key={country._id} >
                         <div className="country-thumbnail">
                             <img alt={`flag from ${country.name.common}`} src={`https://flagpedia.net/data/flags/w1160/${country.alpha2Code.toLowerCase()}.png`} />
                             {country.name.common}
